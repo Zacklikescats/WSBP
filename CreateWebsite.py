@@ -3,13 +3,16 @@ import os
 print("Name of website:")
 NOW = input("> ")
 
-base_path = "/home/zackdcat/Everything/Applications/Projects/Websites"
+#Edit this for directory you want.\/\/\/
+base_path = "./"
+                                 #/\/\/\
 folder_name = NOW
+
+
 folder_path = os.path.join(base_path, folder_name)
 
 os.makedirs(folder_path, exist_ok=True)
 
-# HTML content
 html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +28,6 @@ html_content = f"""<!DOCTYPE html>
 </html>
 """
 
-# CSS content
 css_content = """body {
     background-color: #f0f0f0;
     font-family: "Momo Trust Display", sans-serif;
@@ -43,20 +45,16 @@ h3 {
 
 js_content = ""
 
-# Full paths to files
 html_file_path = os.path.join(folder_path, "index.html")
 css_file_path = os.path.join(folder_path, "index.css")
 js_file_path = os.path.join(folder_path, "index.js")
 
-# Write HTML file
 with open(html_file_path, "w") as f:
     f.write(html_content)
 
-# Write CSS file
 with open(css_file_path, "w") as f:
     f.write(css_content)
 
-# Write CSS file
 with open(js_file_path, "w") as f:
     f.write(js_content)
 
